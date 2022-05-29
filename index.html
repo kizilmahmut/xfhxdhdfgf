@@ -206,6 +206,51 @@ width: 100%;
 
 		
 
+<div class="flipper">
+    <div class="flip-content">
+    
+        
+        <div class="front">
+         <img src="" width="180" height="180" 
+        </div>
+    
+        
+        <div class="back">
+          
+        </div>
+    
+    </div>
+</div>
+							
+<style>
+	.flip-content, .front, .back {
+     width: 180px;
+     height: 180px
+}
+	.flip-content {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative
+}
+	.front, .back {
+     position: absolute;
+     top: 0;
+     left: 0;
+     backface-visibility: hidden;
+     background-color: #eee
+}
+	.front {
+     z-index: 1
+}
+	.back {
+     transform: rotateY(180deg)
+}
+	.flipper:hover .flip-content {
+     transform: rotateY(180deg)
+}
+	.flipper {
+    perspective: 1000px
+}
 
 
 
